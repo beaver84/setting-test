@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- <Pattern>%d{[yyyy.MM.dd HH:mm:ss.SSS]} [%-5level] [%thread] %msg \(%F:%L\) %n</Pattern> -->
+            <Pattern>%green(%d{ISO8601}) %highlight(%-5level) [%magenta(%t)] %cyan(%logger{100}): %msg%n%throwable
+            </Pattern>
+            <!-- <Pattern>%d{[yyyy.MM.dd HH:mm:ss.SSS]} [%-5p] %m (%F:%L)%n</Pattern>//-->
+        </encoder>
+    </appender>
+    <appender name="hibernate" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%green(%d{ISO8601}) %highlight(%-5level) [%magenta(%t)] %cyan(%logger{100}): %msg%n%throwable
+            </pattern>
+        </encoder>
+        <filter class="com.example.settingtest.utils.LogFilter"/>
+    </appender>
+
+    <logger name="org.springframework.core" level="DEBUG" additivity="false">
+        <appender-ref ref="consoleAppender"/>
+    </logger>
+
+    <logger name="reactor.netty.http.client" level="DEBUG" additivity="false">
+        <appender-ref ref="consoleAppender"/>
+    </logger>
+
+    <logger name="org.springframework.boot" level="DEBUG" additivity="false">
+        <appender-ref ref="consoleAppender"/>
+    </logger>
+
+    <logger name="org.springframework.web" level="DEBUG" additivity="false">
+        <appender-ref ref="consoleAppender"/>
+    </logger>
+
+    <logger name="org.apache.ibatis" level="DEBUG" additivity="false">
+        <appender-ref ref="consoleAppender"/>
+    </logger>
+
+    <logger name="jdbc.sqltiming" level="DEBUG" additivity="false">
+        <appender-ref ref="hibernate"/>
+    </logger>
+
+    <logger name="com.example.settingtest" additivity="false">
+        <level value="DEBUG"/>
+        <appender-ref ref="consoleAppender"/>
+    </logger>
+
+    <logger name="jdbc" level="OFF"/>
+    <logger name="jdbc.connection" level="OFF"/>
+    <logger name="jdbc.sqlonly" level="OFF"/>
+    <logger name="jdbc.audit" level="OFF"/>
+    <logger name="jdbc.resultset" level="OFF"/>
+    <logger name="jdbc.resultsettable" level="OFF"/>
+
+</configuration>
