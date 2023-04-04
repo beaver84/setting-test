@@ -1,4 +1,4 @@
-package com.example.settingtest.com.example.settingtest.config;
+package com.example.settingtest.config;
 
 import java.util.Properties;
 

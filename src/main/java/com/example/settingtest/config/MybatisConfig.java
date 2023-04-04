@@ -1,8 +1,8 @@
-package com.example.settingtest.com.example.settingtest.config;
+package com.example.settingtest.config;
 
-import com.example.settingtest.com.example.settingtest.config.typeHandler.LocalDateTimeTypeHandler;
-import com.example.settingtest.com.example.settingtest.config.typeHandler.LocalDateTypeHandler;
-import com.example.settingtest.com.example.settingtest.config.typeHandler.LocalTimeTypeHandler;
+import com.example.settingtest.config.typeHandler.LocalDateTimeTypeHandler;
+import com.example.settingtest.config.typeHandler.LocalDateTypeHandler;
+import com.example.settingtest.config.typeHandler.LocalTimeTypeHandler;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.commons.dbcp2.BasicDataSourceFactory;
 import org.apache.commons.lang3.ArrayUtils;
