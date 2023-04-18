@@ -1,6 +1,7 @@
 package com.example.settingtest.service;
 
 import com.example.settingtest.domain.Member;
+import com.example.settingtest.dto.LoginFormDto;
 import com.example.settingtest.repository.jpa.MemberJpaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.User;
@@ -9,6 +10,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -49,4 +52,5 @@ public class MemberService implements UserDetailsService {
                 .roles(member.getRole().toString())
                 .build();
     }
+
 }
