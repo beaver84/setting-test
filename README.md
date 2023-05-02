@@ -19,7 +19,7 @@ brew로 redis 로컬 설치한다(설치 참고 페이지 : https://redis.io/doc
 
 test -> java.com.teamflace.redis 패키지에서 RedisConfigTest를 실행하여 연동되는 것을 확인한다.
 
-#QueryDsl 적용(선택 사항)
+# QueryDsl 적용(선택 사항)
 
 gradle.build 에서 새로고침 후,
 
