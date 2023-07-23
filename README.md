@@ -31,4 +31,6 @@ gradle.build 에서 새로고침 후,
 
 상단 우측 Gradle 탭을 클릭 후, other -> compileQuerydsl 로 엔티티들의 Qclass 생성 후 test case를 작성한다.
 
-# thymeleaf로 화면을 간략하게 그릴 수 있도록 환경설정이 되어있음
+# thymeleaf template engine 세팅 완료
+
+html 기반으로 화면을 간략하게 그릴 수 있도록 설정이 되어있음
