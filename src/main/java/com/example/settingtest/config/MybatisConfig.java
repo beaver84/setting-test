@@ -36,15 +36,15 @@ public class MybatisConfig {
     public static final Integer QUERY_TIMEOUT = 10;
 
     @ConfigurationProperties(prefix = "teamflace.datasource")
-    @Bean(name = "teamfleshDatasourceProperties")
-    public Properties teamfleshDatasourceProperties() {
+    @Bean(name = "settingTestDatasourceProperties")
+    public Properties settingTestDatasourceProperties() {
         return new Properties();
     }
 
     @Bean(name = "mybatisDataSource")
     public DataSource mybatisDataSource() throws Exception {
-        Properties properties = teamfleshDatasourceProperties();
-        log.info("teamfleshDatasourceProperties ===> {}", properties);
+        Properties properties = settingTestDatasourceProperties();
+        log.info("settingTestDatasourceProperties ===> {}", properties);
         BasicDataSource dataSource = BasicDataSourceFactory.createDataSource(properties);
         dataSource.setDefaultQueryTimeout(QUERY_TIMEOUT);
         return dataSource;
