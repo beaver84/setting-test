@@ -18,9 +18,9 @@ public class RdbConnectionConfiguration {
     @Primary
     public PlatformTransactionManager transactionManager(
             @Qualifier("mybatisTransactionManager") PlatformTransactionManager mybatisTransactionManager,
-            @Qualifier("teamflaceJpaTransactionManager") PlatformTransactionManager teamflaceJpaTransactionManager) {
+            @Qualifier("settingTestJpaTransactionManager") PlatformTransactionManager settingTestJpaTransactionManager) {
         return new ChainedTransactionManager(
                 mybatisTransactionManager,
-                teamflaceJpaTransactionManager);
+                settingTestJpaTransactionManager);
     }
 }
