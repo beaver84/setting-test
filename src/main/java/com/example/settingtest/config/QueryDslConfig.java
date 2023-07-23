@@ -12,7 +12,7 @@ import javax.persistence.PersistenceContext;
 @RequiredArgsConstructor
 public class QueryDslConfig {
 
-    @PersistenceContext(unitName="teamfleshEntityManagerFactory")
+    @PersistenceContext(unitName="settingTestEntityManagerFactory")
     private final EntityManager em;
 
     @Bean(name="appQueryDslFactory")
